@@ -1,6 +1,6 @@
 import { Button, Flex, Modal, Text } from "@mantine/core";
-import { useConfirmation } from "../contexts/ConfirmationContext";
 import { IconAlertCircleFilled } from "@tabler/icons-react";
+import { useConfirmation } from "../contexts/ConfirmationContext";
 
 export const ConfirmationModal = () => {
   const { confirm, cancel, isModalOpen } = useConfirmation();
@@ -17,7 +17,7 @@ export const ConfirmationModal = () => {
     >
       <Text>Are you sure? This action cannot be undone.</Text>
       <Flex gap="sm" pt="sm" justify={"center"}>
-        <Button onClick={cancel} variant="transparent" color="black">
+        <Button onClick={cancel} variant="transparent" c="red">
           Cancel
         </Button>
         <Button color="red" onClick={confirm}>
