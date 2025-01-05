@@ -53,7 +53,11 @@ export const client = {
   async createContact() {
     await sleep();
   },
-  async editContact() {
+  async editContact(contact: Contact) {
     await sleep();
+    Object.assign(
+      initialContacts.find(({ id }) => id === contact.id)!,
+      contact
+    );
   },
 };
